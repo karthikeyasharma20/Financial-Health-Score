@@ -48,9 +48,21 @@ jobs:
       - name: Install Dependencies
         working-directory: frontend
         run: npm ci
-
+      - name: Debug Frontend Environment
+        working-directory: frontend
+        run: |
+          node -v
+          npm -v
+          npx tsc --version
+          npm list typescript
+          npm list vite
+          cat tsconfig.json
+          cat src/vite-env.d.ts
+      
       - name: Build Frontend
         working-directory: frontend
+        env:
+          VITE_API_URL: ""
         run: npm run build
 
   docker:
