@@ -1,13 +1,21 @@
 from fastapi import APIRouter, Depends, status, BackgroundTasks
 from sqlalchemy.orm import Session
 import os
+import sys
 
+ML_PATH = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "..", "ml-model")
+)
+
+if ML_PATH not in sys.path:
+    sys.path.append(ML_PATH)
+from train import train_model
 from app.database import get_db
 from app.models import User
 from app.schemas import PredictRequest, PredictResponse
 from app.auth import get_current_admin
 from app.services.score_calculator import predictor
-from train import train_model
+
 
 router = APIRouter(prefix="/ml", tags=["Machine Learning"])
 
