@@ -4,6 +4,17 @@ from datetime import datetime, timedelta
 from decimal import Decimal
 
 from app.models import Transaction, Loan, Investment, Goal, FinancialScore
+
+import os
+import sys
+
+ML_PATH = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "..", "ml-model")
+)
+
+if ML_PATH not in sys.path:
+    sys.path.append(ML_PATH)
+
 from predict import FinancialScorePredictor
 
 predictor = FinancialScorePredictor()
