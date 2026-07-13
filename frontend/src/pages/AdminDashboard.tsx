@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
-import { Card, CardTitle, Button, Badge } from '../components/ui/CustomUI';
+import { Card, CardTitle, Button} from '../components/ui/CustomUI';
 import { ShieldCheck, Cpu, RefreshCw, BarChart2, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { Card, CardTitle, Button, Input } from '../components/ui/CustomUI';
-import { User, Shield, Mail, Key, Webhook, BellRing } from 'lucide-react';
+import {  Shield, Mail, Key, Webhook, BellRing } from 'lucide-react';
 
 export const Profile: React.FC = () => {
   const { user } = useAuth();

@@ -53,7 +53,7 @@ export const Recommendations: React.FC = () => {
       // Fetch score details to build context
       const scoreRes = await api.get('/financial-score');
       const score = scoreRes.data.score;
-      const metrics = scoreRes.data;
+      //const  = scoreRes.data;
 
       // Simulate sending prompt to Gemini / OpenAI
       setTimeout(() => {

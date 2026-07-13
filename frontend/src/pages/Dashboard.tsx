@@ -13,12 +13,10 @@ import {
   Legend 
 } from 'chart.js';
 import { 
-  Wallet, 
   TrendingDown, 
   TrendingUp, 
   Calendar, 
-  ArrowUpRight, 
-  Target 
+  ArrowUpRight 
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -235,7 +233,7 @@ export const Dashboard: React.FC = () => {
                 options={{
                   responsive: true,
                   maintainAspectRatio: false,
-                  plugins: { legend: { display: true, position: 'bottom', labels: { boxWidth: 10, fontSize: 10 } } }
+                  plugins: { legend: { display: true, position: 'bottom', labels: { boxWidth: 10, font: {size: 10} } } }
                 }} 
               />
             ) : (

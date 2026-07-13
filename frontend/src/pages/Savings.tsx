@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
 import { Card, CardTitle, Button, Input, Badge } from '../components/ui/CustomUI';
-import { PiggyBank, ArrowDownRight, Edit2, CheckCircle2, TrendingUp, AlertTriangle } from 'lucide-react';
+import { PiggyBank,  Edit2, CheckCircle2,  AlertTriangle } from 'lucide-react';
 
 export const Savings: React.FC = () => {
   const [data, setData] = useState<any>(null);

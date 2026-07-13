@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
 import { Card, CardTitle, Button, Badge } from '../components/ui/CustomUI';
-import { Download, RefreshCw, AlertTriangle, ShieldCheck, CheckCircle } from 'lucide-react';
+import { Download, RefreshCw} from 'lucide-react';
 import { Line } from 'react-chartjs-2';
 import { 
   Chart as ChartJS, 

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
-import { Card, CardTitle, Button, Input, Dialog, Badge } from '../components/ui/CustomUI';
+import { Card, CardTitle, Button, Input, Dialog} from '../components/ui/CustomUI';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { Landmark, TrendingUp, TrendingDown, Trash2, Plus, AlertTriangle } from 'lucide-react';
+import { Landmark, Trash2, Plus, AlertTriangle } from 'lucide-react';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -231,7 +231,7 @@ export const Investments: React.FC = () => {
                 options={{
                   responsive: true,
                   maintainAspectRatio: false,
-                  plugins: { legend: { position: 'bottom', labels: { boxWidth: 8, fontSize: 10 } } }
+                  plugins: { legend: { position: 'bottom', labels: { boxWidth: 8, font:{size: 10 }} } }
                 }} 
               />
             ) : (

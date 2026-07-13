@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
-import { Card, CardTitle, Button, Input, Dialog, Badge } from '../components/ui/CustomUI';
-import { Target, Trash2, Plus, AlertTriangle, ArrowUpRight } from 'lucide-react';
+import { Card, Button, Input, Dialog, Badge } from '../components/ui/CustomUI';
+import { Target, Trash2, Plus, AlertTriangle } from 'lucide-react';
 
 interface Goal {
   id: number;

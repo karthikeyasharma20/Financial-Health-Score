@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
-import { Card, CardTitle, Button, Input, Dialog, Badge } from '../components/ui/CustomUI';
+import { Card,  Button, Input, Dialog, Badge } from '../components/ui/CustomUI';
 import { Plus, Download, Search, Trash2, ArrowLeftRight, AlertTriangle } from 'lucide-react';
 
 interface Transaction {
