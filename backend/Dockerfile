@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.11-slim
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -8,15 +8,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /app
 
-# Copy requirements and install python packages
+# Install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy backend source files
-COPY app/ ./app/
+# Copy backend source
+COPY app ./app
 
-# Expose FastAPI port
+# Copy ML models
+COPY ml-model ./ml-model
+
+# Copy SQLite database (optional but recommended for demo)
+COPY financial_health.db .
+
 EXPOSE 8000
 
-# Run uvicorn web server
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
