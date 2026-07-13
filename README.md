@@ -1,3 +1,4 @@
+![CI](https://github.com/karthikeyasharma20/Financial-Health-Score/actions/workflows/ci-cd.yml/badge.svg)
 # AI Financial Health Score Platform
 
 A production-ready, full-stack financial health evaluation platform designed with a premium fintech aesthetic. It analyzes transactional ledgers, loan balances, asset investments, and goals, using an XGBoost Regressor to calculate an optimized Financial Health Score (0-1000).
